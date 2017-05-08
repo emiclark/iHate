@@ -20,8 +20,6 @@
 		00EBC69D1EBF998900A0C84B /* bloodSplat-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00EBC6931EBF998900A0C84B /* bloodSplat-1.png */; };
 		00EBC69E1EBF998900A0C84B /* bloodSplat-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 00EBC6941EBF998900A0C84B /* bloodSplat-2.png */; };
 		00EBC6A21EBFF96000A0C84B /* bloodSplat-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 00EBC6A11EBFF96000A0C84B /* bloodSplat-0.png */; };
-		00EBC6A51EC01CA300A0C84B /* agony.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00EBC6A31EC01CA300A0C84B /* agony.mp3 */; };
-		00EBC6A61EC01CA300A0C84B /* agony2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00EBC6A41EC01CA300A0C84B /* agony2.mp3 */; };
 		00FD3F991EBE3C36000EDF2D /* audioOFF-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FD3F971EBE3C36000EDF2D /* audioOFF-icon.png */; };
 		00FD3F9A1EBE3C36000EDF2D /* audioON-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FD3F981EBE3C36000EDF2D /* audioON-icon.png */; };
 		AA79FBDF1EBCD2D6009D337C /* PlayerScore.m in Sources */ = {isa = PBXBuildFile; fileRef = AA79FBDE1EBCD2D6009D337C /* PlayerScore.m */; };
@@ -59,8 +57,6 @@
 		00EBC6931EBF998900A0C84B /* bloodSplat-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bloodSplat-1.png"; sourceTree = "<group>"; };
 		00EBC6941EBF998900A0C84B /* bloodSplat-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bloodSplat-2.png"; sourceTree = "<group>"; };
 		00EBC6A11EBFF96000A0C84B /* bloodSplat-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bloodSplat-0.png"; sourceTree = "<group>"; };
-		00EBC6A31EC01CA300A0C84B /* agony.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = agony.mp3; sourceTree = "<group>"; };
-		00EBC6A41EC01CA300A0C84B /* agony2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = agony2.mp3; sourceTree = "<group>"; };
 		00FD3F971EBE3C36000EDF2D /* audioOFF-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "audioOFF-icon.png"; sourceTree = "<group>"; };
 		00FD3F981EBE3C36000EDF2D /* audioON-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "audioON-icon.png"; sourceTree = "<group>"; };
 		4321CA90FD9D1FDC7144BAD3 /* Pods-iHate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHate.release.xcconfig"; path = "Pods/Target Support Files/Pods-iHate/Pods-iHate.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,8 +180,6 @@
 				00EBC68F1EBF998900A0C84B /* bloodSplat-9.png */,
 				00FD3F971EBE3C36000EDF2D /* audioOFF-icon.png */,
 				00FD3F981EBE3C36000EDF2D /* audioON-icon.png */,
-				00EBC6A31EC01CA300A0C84B /* agony.mp3 */,
-				00EBC6A41EC01CA300A0C84B /* agony2.mp3 */,
 				F9888BBC1EBD10EB00B2E002 /* bloodSplatSound.mp3 */,
 				F9888BBE1EBD10F300B2E002 /* squishSound.mp3 */,
 				F9888BC21EBD14CF00B2E002 /* boneSound.mp3 */,
@@ -261,7 +255,6 @@
 				F9888BC31EBD14CF00B2E002 /* boneSound.mp3 in Resources */,
 				FA4DD7881EBBC87300CB48FE /* LaunchScreen.storyboard in Resources */,
 				F9888BC51EBD151000B2E002 /* squishySound.mp3 in Resources */,
-				00EBC6A61EC01CA300A0C84B /* agony2.mp3 in Resources */,
 				00EBC6A21EBFF96000A0C84B /* bloodSplat-0.png in Resources */,
 				F9888BBD1EBD10EB00B2E002 /* bloodSplatSound.mp3 in Resources */,
 				00EBC6961EBF998900A0C84B /* bloodSplat-7.png in Resources */,
@@ -269,7 +262,6 @@
 				00EBC69B1EBF998900A0C84B /* bloodSplat-5.png in Resources */,
 				00EBC6971EBF998900A0C84B /* bloodSplat-3.png in Resources */,
 				00EBC69C1EBF998900A0C84B /* bloodSplat-4.png in Resources */,
-				00EBC6A51EC01CA300A0C84B /* agony.mp3 in Resources */,
 				00FD3F9A1EBE3C36000EDF2D /* audioON-icon.png in Resources */,
 				FA4DD7851EBBC87300CB48FE /* Assets.xcassets in Resources */,
 				00EBC69E1EBF998900A0C84B /* bloodSplat-2.png in Resources */,
