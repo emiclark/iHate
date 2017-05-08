@@ -202,7 +202,7 @@
 - (void) playHitSound {
     SystemSoundID audioEffect;
     NSString *path;
-    int whichSound = arc4random_uniform(7);
+    int whichSound = arc4random_uniform(4);
     
     switch (whichSound) {
         case 0:
@@ -212,17 +212,12 @@
             path = [[NSBundle mainBundle] pathForResource : @"squishSound" ofType :@"mp3"];
             break;
         case 2:
-            path = [[NSBundle mainBundle] pathForResource : @"agony2" ofType :@"mp3"];
-            break;
-        case 3:
             path = [[NSBundle mainBundle] pathForResource : @"boneSound" ofType :@"mp3"];
             break;
-        case 4:
+        case 3:
             path = [[NSBundle mainBundle] pathForResource : @"squishySound" ofType :@"mp3"];
             break;
-        case 5:
-            path = [[NSBundle mainBundle] pathForResource : @"agony" ofType :@"mp3"];
-            break;
+
             
         default:
             break;
