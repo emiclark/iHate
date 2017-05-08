@@ -18,6 +18,7 @@
 
 @property UIImage *currentVictim;
 @property int howOftenHeadsPopUp;
+@property int numberOfHeadsPoppingUp;
 @property (weak, nonatomic) IBOutlet UIImageView *bloodSplats;
 
 @property int gameTime;

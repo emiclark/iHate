@@ -16,7 +16,7 @@
 
 
 #define MAX_NUM_FOR_HEADS  5
-#define MAX_TIME 5
+#define MAX_TIME 30
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,13 +30,12 @@
     [self.timer1 invalidate];
     [self.timer2 invalidate];
     [self.timer3 invalidate];
-    
+
     self.gameTime = MAX_TIME;
     self.currentGameTime = MAX_TIME;
     self.gameFinished = FALSE;
     self.timeLabel.text = [NSString stringWithFormat:@":%d Secs", self.currentGameTime];
     self.scoreLabel.text = @"0";
-
     
     if(self.currentVictim != nil){
         [self.button1 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
@@ -54,16 +53,17 @@
     }
     
     
+    
     self.howOftenHeadsPopUp = arc4random_uniform(MAX_NUM_FOR_HEADS);
+
     
     // begin timer
     
+    self.timer3 = [NSTimer scheduledTimerWithTimeInterval:self.gameTime target:self selector:@selector(finishGame) userInfo:nil repeats:NO];
+    
     self.timer1 = [NSTimer scheduledTimerWithTimeInterval:self.howOftenHeadsPopUp target:self selector:@selector(activateVictim) userInfo:nil repeats:YES];
     
-    self.timer2 = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
-    
-    self.timer3 = [NSTimer scheduledTimerWithTimeInterval:self.gameTime target:self selector:@selector(finishGame) userInfo:nil repeats:NO];
- 
+    [self.timer2 = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime) userInfo:nil  repeats:YES]  fire];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -72,11 +72,11 @@
     [self.timer2 invalidate];
     [self.timer3 invalidate];
     
-    [super viewWillDisappear: animated];
-    
     self.timer1 = nil;
     self.timer2 = nil;
     self.timer3 = nil;
+
+    [super viewWillDisappear: animated];
     
 }
 
@@ -93,6 +93,13 @@
     [self.timer1 invalidate];
     [self.timer2 invalidate];
     [self.timer3 invalidate];
+    
+    
+    self.timer1 = nil;
+    self.timer2 = nil;
+    self.timer3 = nil;
+    
+
     
     // save your score and high score to NSUserDefaults
     int highScore = [[[NSUserDefaults standardUserDefaults] objectForKey:@"highScore"] intValue];
@@ -151,13 +158,11 @@
         return;
     }
     
-    self.howOftenHeadsPopUp = arc4random_uniform(MAX_NUM_FOR_HEADS);
-    
-    int numberOfHeadsPoppingUp = arc4random_uniform(MAX_NUM_FOR_HEADS);
-    NSLog(@"numberOfHeadsPoppingUp: %d,  howOftenHeadsPopUp:%d", numberOfHeadsPoppingUp,self.howOftenHeadsPopUp);
+    self.numberOfHeadsPoppingUp = arc4random_uniform(MAX_NUM_FOR_HEADS);
+    NSLog(@"\nnumberOfHeadsPoppingUp: %d,  \nhowOftenHeadsPopUp:%d\n", self.numberOfHeadsPoppingUp,self.howOftenHeadsPopUp);
     
     
-    switch (numberOfHeadsPoppingUp) {
+    switch (self.numberOfHeadsPoppingUp) {
         case 0:
             [self whichHeads];
             break;
@@ -231,8 +236,6 @@
         case 3:
             path = [[NSBundle mainBundle] pathForResource : @"squishySound" ofType :@"mp3"];
             break;
-
-            
         default:
             break;
             
@@ -307,7 +310,6 @@
     NSTimer *endIt = timer;
     self.bloodSplats.image = nil;
     [timer invalidate];
-    
     NSLog(@"endit:%@",endIt);
     
 }
