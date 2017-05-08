@@ -23,7 +23,7 @@
 {
     self = [super init];
     if (self) {
-        self.games = @[@"Whack-em", @"BBQ-em", @"Slice-n-Dice", @"Redux-em", @"Go Nuclear", @"Hulk SMASH"];
+        self.games = @[@"Whack-em", @"BBQ-em", @"Slice-n-Dice", @"Redux-em", @"Go Nuclear",  @"Hulk SMASH", @"Ex-it Out"];
         self.currentScore = 0;
         self.playerScores = [[NSMutableArray alloc]init];
         self.currentVictim = [[UIImage alloc] init];

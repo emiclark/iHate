@@ -16,7 +16,7 @@
 
 
 #define MAX_NUM_FOR_HEADS  5
-#define MAX_TIME 30
+#define MAX_TIME 5
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -56,6 +56,8 @@
     
     self.howOftenHeadsPopUp = arc4random_uniform(MAX_NUM_FOR_HEADS);
     
+    // begin timer
+    
     self.timer1 = [NSTimer scheduledTimerWithTimeInterval:self.howOftenHeadsPopUp target:self selector:@selector(activateVictim) userInfo:nil repeats:YES];
     
     self.timer2 = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
@@ -66,8 +68,16 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+    [self.timer1 invalidate];
+    [self.timer2 invalidate];
+    [self.timer3 invalidate];
+    
     [super viewWillDisappear: animated];
-    self.dao.currentBGSong = nil;
+    
+    self.timer1 = nil;
+    self.timer2 = nil;
+    self.timer3 = nil;
+    
 }
 
 -(void) updateTime{
@@ -107,16 +117,18 @@
     UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         NSString *theName = alert.textFields[0].text;
-        if ([theName isEqual: [NSNull null]]) {
-            theName = @"Player";
+        if (theName.length == 0) {
+            self.dao.currentName = @"player";
         } else {
             self.dao.currentName = theName;
-        }
+        }        
         [self performSegueWithIdentifier:@"showResults" sender:self];
     }];
     
     // Add the button to the controller
     [alert addAction:okButton];
+    
+    
     
     [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = @"Enter your Name";
@@ -142,6 +154,8 @@
     self.howOftenHeadsPopUp = arc4random_uniform(MAX_NUM_FOR_HEADS);
     
     int numberOfHeadsPoppingUp = arc4random_uniform(MAX_NUM_FOR_HEADS);
+    NSLog(@"numberOfHeadsPoppingUp: %d,  howOftenHeadsPopUp:%d", numberOfHeadsPoppingUp,self.howOftenHeadsPopUp);
+    
     
     switch (numberOfHeadsPoppingUp) {
         case 0:

@@ -115,7 +115,6 @@
                             <constraint firstItem="hYP-Vi-Soc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GR6-Le-fpv"/>
                             <constraint firstItem="9oh-tk-cKV" firstAttribute="top" secondItem="U9I-Re-Kle" secondAttribute="bottom" constant="3" id="H5n-pK-YRo"/>
                             <constraint firstItem="TJ2-0c-EW1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LdK-8h-bTY"/>
-                            <constraint firstItem="jiS-pe-h00" firstAttribute="leading" secondItem="Akr-Mh-pzf" secondAttribute="trailing" constant="23" id="MZe-Wh-3bU"/>
                             <constraint firstItem="jiS-pe-h00" firstAttribute="top" secondItem="hYP-Vi-Soc" secondAttribute="bottom" constant="3" id="Mei-1s-yD6"/>
                             <constraint firstItem="Sfu-7J-pan" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="N4W-r8-NLK"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V8w-pG-1Tm" secondAttribute="bottom" id="QDh-lW-idb"/>
@@ -126,7 +125,6 @@
                             <constraint firstItem="TJ2-0c-EW1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="152" id="sPJ-pt-RMH"/>
                             <constraint firstItem="Akr-Mh-pzf" firstAttribute="top" secondItem="hYP-Vi-Soc" secondAttribute="bottom" constant="3" id="wzD-wQ-5n8"/>
                             <constraint firstItem="V8w-pG-1Tm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="y2e-re-LpX"/>
-                            <constraint firstItem="jiS-pe-h00" firstAttribute="leading" secondItem="Akr-Mh-pzf" secondAttribute="trailing" constant="23" id="yUH-0k-ioX"/>
                             <constraint firstItem="Akr-Mh-pzf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="yb1-ga-zAb"/>
                         </constraints>
                     </view>
